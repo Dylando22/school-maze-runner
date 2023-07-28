@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <title>Maze Generator</title>
+</head>
+<body>
+    <div class="main">
+    <h1 class="header">Maze Game</h1>
+    <div class="container">
+        <div class="menu-container">
+            <h1>MENU</h1>
+            <h4>Choose Maze Size:</h4>
+            <button type="button" class="btn btn-info" onClick="getInput(5);">5x5</button>
+            <button type="button" class="btn btn-primary" onClick="getInput(10);">10x10</button>
+            <button type="button" class="btn btn-warning" onClick="getInput(15);">15x15</button>
+            <button type="button" class="btn btn-danger" onClick="getInput(20);">20x20</button>
+            <h2>HighScores</h2>
+<ul>
+    <li>5X5: <span id="5score"></span></li>
+    <li>10X10: <span id="10score"></span></li>
+    <li>15X15: <span id="15score"></span></li>
+    <li>20X20: <span id="20score"></span></li>
+
+</ul>
+        </div>
+        <div class="maze-container">
+            <div class="tool-bar">
+                <h5 id="timer">Time: 0:00</h5>
+                <h5 id="playerScore">Score: 0</h5>
+            </div>
+            <canvas id="id-canvas" width="1000" height="1000" 
+            style="width:95%; height:95%; margin: auto;"> 
+            </canvas>
+        </div>
+        <div class="info-container">
+            <h1>Controls</h1>
+            <ul>
+                <li>A: move left</li>
+                <li>S: move down</li>
+                <li>W: move up</li>
+                <li>D: move right</li>
+                <li>B: toggle path traveled</li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <script src="scripts/input.js"></script>
+    <script src="scripts/mazeGenerator.js"></script>
+    <script src="scripts/gameLoop.js"></script>
+
+</body>
+</html>
